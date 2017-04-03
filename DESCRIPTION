@@ -1,0 +1,12 @@
+Package: duckduckr
+Type: Package
+Title: API Client for DuckDuckGo's Instant Answer
+Version: 0.1.0
+Authors@R: c(person("Schumacher", "Dirk", email = "mail@dirk-schumacher.net", role = c("aut", "cre")))
+Description: It does it exactly what you think it does.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports: crul, jsonlite
+Suggests: testthat
+RoxygenNote: 6.0.1

@@ -1,0 +1,38 @@
+---
+output: github_document
+---
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/duckduckr)](https://cran.r-project.org/package=duckduckr)
+[![Travis-CI Build Status](https://travis-ci.org/duckduckr.svg?branch=master)](https://travis-ci.org/)
+
+# DuckduckR
+
+This is an *R* client for [https://duckduckgo.com/api](DuckDuckGo's Instant Answer API).
+
+## Install
+
+```{r, eval=FALSE}
+devtools::install_github("dirkschumacher/duckduckr")
+```
+
+
+## Use
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "README-"
+)
+```
+
+```{r}
+library(duckduckr)
+res <- duckduck_answer("ggplot")
+```
+
+```{r,eval=FALSE}
+res$result$Abstract
+```
+<blockquote>
+`r res$result$Abstract`
+</blockquote>
+
