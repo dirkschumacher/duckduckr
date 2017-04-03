@@ -1,5 +1,5 @@
 
-[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/duckduckr)](https://cran.r-project.org/package=duckduckr) [![Travis-CI Build Status](https://travis-ci.org/duckduckr.svg?branch=master)](https://travis-ci.org/)
+[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/duckduckr)](https://cran.r-project.org/package=duckduckr) [![Build Status](https://travis-ci.org/dirkschumacher/duckduckr.svg?branch=master)](https://travis-ci.org/dirkschumacher/duckduckr)
 
 DuckduckR
 =========
