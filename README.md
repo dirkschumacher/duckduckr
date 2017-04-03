@@ -4,7 +4,7 @@
 DuckduckR
 =========
 
-This is an *R* client for [https://duckduckgo.com/api](DuckDuckGo's%20Instant%20Answer%20API).
+This is an *R* client for [DuckDuckGo's Instant Answer API](https://duckduckgo.com/api).
 
 Install
 -------

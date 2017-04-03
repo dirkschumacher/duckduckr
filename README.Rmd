@@ -6,7 +6,7 @@ output: github_document
 
 # DuckduckR
 
-This is an *R* client for [https://duckduckgo.com/api](DuckDuckGo's Instant Answer API).
+This is an *R* client for [DuckDuckGo's Instant Answer API](https://duckduckgo.com/api).
 
 ## Install
 
