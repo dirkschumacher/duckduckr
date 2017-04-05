@@ -56,7 +56,8 @@ duckduck_answer <- function(query, no_redirect = FALSE,
       error = list(
         "message" = "HTTP get call failed",
         "http_status" = http_status
-      )
+      ),
+      source = result$url
     )
   }
 }
