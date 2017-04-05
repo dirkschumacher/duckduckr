@@ -35,4 +35,3 @@ res$result$Abstract
 <blockquote>
 `r res$result$Abstract`
 </blockquote>
-

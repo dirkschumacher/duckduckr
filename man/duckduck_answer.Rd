@@ -19,7 +19,7 @@ duckduck_answer(query, no_redirect = FALSE, no_html = FALSE,
 \item{app_name}{the appname used to identify your application. This is optional.
 
 If the JSON cannot be parsed then this function throws an error.
-If you want to be safe try to catch errors.}
+If you want to be safe, try to catch those errors.}
 }
 \value{
 Always returns a list with at least the slot `status`.
@@ -27,5 +27,5 @@ Always returns a list with at least the slot `status`.
         If the status is `error`, then additional information is in the `error` slot.
 }
 \description{
-Makes a synchronous call.
+Makes a synchronous API call.
 }
