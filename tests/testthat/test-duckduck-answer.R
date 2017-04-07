@@ -3,4 +3,5 @@ test_that("it works", {
   result <- duckduck_answer("ggplot", app_name = "duckduckr_development")
   expect_true(is.list(result))
   expect_true(length(result) > 0)
+  expect_equal("OK", attr(result, "status"))
 })

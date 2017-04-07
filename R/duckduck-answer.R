@@ -64,27 +64,34 @@ duckduck_answer <- function(query, no_redirect = FALSE,
       parsed_response
     }, error = function(e) {
       parsed_response <- list()
-      attributes(parsed_response) <- list(
-        status = "error",
-        error = list(
+      attributes(parsed_response) <- make_error_object(
+        result$url,
+        list(
           "message" = e$message,
           "type" = "json_parse_error"
-        ),
-        source = result$url
+        )
       )
       parsed_response
     })
   } else {
     parsed_response <- list()
-    attributes(parsed_response) <- list(
-      status = "error",
-      error = list(
+    attributes(parsed_response) <- make_error_object(
+      result$url,
+      list(
         "message" = "HTTP get call failed",
         "http_status" = http_status,
         "type" = "http_error"
-      ),
-      source = result$url
+      )
     )
   }
   parsed_response
+}
+
+#' @noRd
+make_error_object <- function(url, error) {
+  list(
+    status = "error",
+    error = error,
+    source = url
+  )
 }
