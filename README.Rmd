@@ -40,3 +40,7 @@ res$Abstract
 <blockquote>
 `r res$Abstract`
 </blockquote>
+
+## Contributing
+
+If you found a bug or want to propose a feature, feel free to visit the [issues page](https://github.com/dirkschumacher/duckduckr/issues).
