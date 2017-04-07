@@ -1,6 +1,6 @@
 Package: duckduckr
 Type: Package
-Title: API Client for DuckDuckGo's Instant Answer
+Title: Simple Client for DuckDuckGo's Instant Answer API
 Version: 1.0.0
 Authors@R: c(person("Schumacher", "Dirk", email = "mail@dirk-schumacher.net", role = c("aut", "cre")))
 Description: A package to call DuckDuckGo's Instant Answer API.
