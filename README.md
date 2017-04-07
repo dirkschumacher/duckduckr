@@ -20,8 +20,12 @@ Use
 library(duckduckr)
 res <- duckduck_answer("ggplot")
 
-# meta data of the call are part of the attributes
-stopifnot(attr(res, "status") == "OK") 
+# meta data of the call is part of the attributes
+stopifnot(attr(res, "status") == "OK")
+
+# the original http call
+attr(res, "source")
+#> [1] "https://api.duckduckgo.com/?q=ggplot&no_redirect=0&no_html=0&format=json&skip_disambig=0&t=duckduckr"
 ```
 
 ``` r

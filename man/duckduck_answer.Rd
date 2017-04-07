@@ -20,13 +20,26 @@ duckduck_answer(query, no_redirect = FALSE, no_html = FALSE,
 }
 \value{
 Always returns a list. If the API call was successful it contains the response of
-        the duckduckgo api as parsed by \code{\link[jsonlite]{fromJSON}}. In addition the object's
-        attributes contain additional meta data. Especially the status attribute indicates
-        if something went wrong during the HTTP call or parsing of the json text.
+        the duckduckgo API as parsed by \code{\link[jsonlite]{fromJSON}}. In addition the object's
+        attributes contain additional meta data. Especially the \code{status} attribute indicates
+        if something went wrong during the HTTP call or parsing of the JSON text.
+
+        In case the call was successfull the \code{status} attribute is equal to "OK".
+
+        In case something went wrong, the \code{status} attribute is equal to "error" and in the
+        \code{error} attribute you will find more information. In particular the \code{type}, which is
+        either "http_error" or "json_parse_error" depending on the error's source.
+
+        In case of a "http_error", there is an additional \code{message} and \code{http_status}
+        element.
+
+        In case of "json_parse_error", there is an additional \code{message} element.
+
+        In addition there is always a \code{source} element with the URL used to query the data.
 }
 \description{
 Makes a synchronous API call to the DuckDuckGo Instant Answer API.
 }
 \seealso{
-\url{https://api.duckduckgo.com/api} for more information on the API.
+\url{https://api.duckduckgo.com/api} for more information on the API and their terms of use.
 }

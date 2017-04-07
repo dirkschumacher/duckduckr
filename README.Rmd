@@ -30,8 +30,11 @@ knitr::opts_chunk$set(
 library(duckduckr)
 res <- duckduck_answer("ggplot")
 
-# meta data of the call are part of the attributes
-stopifnot(attr(res, "status") == "OK") 
+# meta data of the call is part of the attributes
+stopifnot(attr(res, "status") == "OK")
+
+# the original http call
+attr(res, "source")
 ```
 
 ```{r,eval=FALSE}
