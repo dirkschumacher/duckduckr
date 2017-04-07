@@ -1,19 +1,19 @@
 #' DuckDuckGo's Instant Answer API
 #'
-#' Makes a synchronous API call.
+#' Makes a synchronous API call to the DuckDuckGo Instant Answer API.
 #'
 #' @param query the query string
 #' @param no_redirect TRUE to skip HTTP redirects (for !bang commands)
 #' @param no_html TRUE to remove html from results
 #' @param skip_disambig TRUE to to skip disambiguation (D) Type.
-#' @param app_name the appname used to identify your application. This is optional.
+#' @param app_name the appname used to identify your application.
 #'
-#' If the JSON cannot be parsed then this function throws an error.
-#' If you want to be safe, try to catch those errors.
+#' @seealso \url{https://api.duckduckgo.com/api} for more information on the API.
 #'
-#' @return Always returns a list with at least the slot `status`.
-#'         If the status is `OK`, then the result of the query is in the `result` slot.
-#'         If the status is `error`, then additional information is in the `error` slot.
+#' @return Always returns a list. If the API call was successful it contains the response of
+#'         the duckduckgo api as parsed by \code{\link[jsonlite]{fromJSON}}. In addition the object's
+#'         attributes contain additional meta data. Especially the status attribute indicates
+#'         if something went wrong during the HTTP call or parsing of the json text.
 #' @export
 duckduck_answer <- function(query, no_redirect = FALSE,
                             no_html = FALSE, skip_disambig = FALSE,
@@ -33,7 +33,7 @@ duckduck_answer <- function(query, no_redirect = FALSE,
   stopifnot(is.logical(skip_disambig))
 
   # construct the api call
-  client <- crul::HttpClient$new(url = "https://api.duckduckgo.com")
+  client <- crul::HttpClient$new(url = "https://api.duckduckgo.com/")
   query_params <- list(
     q = query,
     no_redirect = as.integer(no_redirect),
@@ -47,19 +47,44 @@ duckduck_answer <- function(query, no_redirect = FALSE,
   # format the result
   http_status <- result$status_http()$status_code
   if (http_status == "200") {
-    list(
-      status = "OK",
-      result = jsonlite::fromJSON(suppressMessages(result$parse("UTF-8"))),
-      source = result$url
-    )
+    parsed_response <- tryCatch({
+      parsed_response <- jsonlite::fromJSON(
+        suppressMessages(result$parse("UTF-8")),
+        simplifyVector = TRUE,
+        simplifyDataFrame = TRUE,
+        simplifyMatrix = TRUE,
+        flatten = FALSE
+      )
+      response_names <- names(parsed_response)
+      attributes(parsed_response) <- list(
+        status = "OK",
+        source = result$url
+      )
+      names(parsed_response) <- response_names
+      parsed_response
+    }, error = function(e) {
+      parsed_response <- list()
+      attributes(parsed_response) <- list(
+        status = "error",
+        error = list(
+          "message" = e$message,
+          "type" = "json_parse_error"
+        ),
+        source = result$url
+      )
+      parsed_response
+    })
   } else {
-    list(
+    parsed_response <- list()
+    attributes(parsed_response) <- list(
       status = "error",
       error = list(
         "message" = "HTTP get call failed",
-        "http_status" = http_status
+        "http_status" = http_status,
+        "type" = "http_error"
       ),
       source = result$url
     )
   }
+  parsed_response
 }

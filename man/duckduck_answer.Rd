@@ -16,16 +16,17 @@ duckduck_answer(query, no_redirect = FALSE, no_html = FALSE,
 
 \item{skip_disambig}{TRUE to to skip disambiguation (D) Type.}
 
-\item{app_name}{the appname used to identify your application. This is optional.
-
-If the JSON cannot be parsed then this function throws an error.
-If you want to be safe, try to catch those errors.}
+\item{app_name}{the appname used to identify your application.}
 }
 \value{
-Always returns a list with at least the slot `status`.
-        If the status is `OK`, then the result of the query is in the `result` slot.
-        If the status is `error`, then additional information is in the `error` slot.
+Always returns a list. If the API call was successful it contains the response of
+        the duckduckgo api as parsed by \code{\link[jsonlite]{fromJSON}}. In addition the object's
+        attributes contain additional meta data. Especially the status attribute indicates
+        if something went wrong during the HTTP call or parsing of the json text.
 }
 \description{
-Makes a synchronous API call.
+Makes a synchronous API call to the DuckDuckGo Instant Answer API.
+}
+\seealso{
+\url{https://api.duckduckgo.com/api} for more information on the API.
 }

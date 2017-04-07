@@ -1,10 +1,10 @@
 
-[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/duckduckr)](https://cran.r-project.org/package=duckduckr) [![Build Status](https://travis-ci.org/dirkschumacher/duckduckr.svg?branch=master)](https://travis-ci.org/dirkschumacher/duckduckr)
+[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/duckduckr)](https://cran.r-project.org/package=duckduckr) [![Build Status](https://travis-ci.org/dirkschumacher/duckduckr.svg?branch=master)](https://travis-ci.org/dirkschumacher/duckduckr) [![Coverage Status](https://img.shields.io/codecov/c/github/dirkschumacher/duckduckr/master.svg)](https://codecov.io/github/dirkschumacher/duckduckr?branch=master)
 
 DuckduckR
 =========
 
-This is an *R* client for [DuckDuckGo's Instant Answer API](https://duckduckgo.com/api).
+This is a simple *R* client for [DuckDuckGo's Instant Answer API](https://duckduckgo.com/api).
 
 Install
 -------
@@ -22,7 +22,7 @@ res <- duckduck_answer("ggplot")
 ```
 
 ``` r
-res$result$Abstract
+res$Abstract
 ```
 
 <blockquote>
