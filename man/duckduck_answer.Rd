@@ -39,6 +39,7 @@ Always returns a list. If the API call was successful it contains the response o
 }
 \description{
 Makes a synchronous API call to the DuckDuckGo Instant Answer API.
+Take a look at DuckDuckGo's terms of use (\url{https://api.duckduckgo.com/api}), before using it.
 }
 \seealso{
 \url{https://api.duckduckgo.com/api} for more information on the API and their terms of use.
