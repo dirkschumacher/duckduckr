@@ -1,5 +1,5 @@
 
-[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/duckduckr)](https://cran.r-project.org/package=duckduckr) [![Build Status](https://travis-ci.org/dirkschumacher/duckduckr.svg?branch=master)](https://travis-ci.org/dirkschumacher/duckduckr) [![Coverage Status](https://img.shields.io/codecov/c/github/dirkschumacher/duckduckr/master.svg)](https://codecov.io/github/dirkschumacher/duckduckr?branch=master)
+[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/duckduckr)](https://cran.r-project.org/package=duckduckr) [![Build Status](https://travis-ci.org/dirkschumacher/duckduckr.svg?branch=master)](https://travis-ci.org/dirkschumacher/duckduckr) [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/dirkschumacher/duckduckr?branch=master&svg=true)](https://ci.appveyor.com/project/dirkschumacher/duckduckr) [![Coverage Status](https://img.shields.io/codecov/c/github/dirkschumacher/duckduckr/master.svg)](https://codecov.io/github/dirkschumacher/duckduckr?branch=master)
 
 DuckduckR
 =========
