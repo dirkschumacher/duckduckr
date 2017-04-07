@@ -19,6 +19,9 @@ Use
 ``` r
 library(duckduckr)
 res <- duckduck_answer("ggplot")
+
+# meta data of the call are part of the attributes
+stopifnot(attr(res, "status") == "OK") 
 ```
 
 ``` r
