@@ -1,7 +1,7 @@
 #' Call DuckDuckGo Instant Answer API
 #'
 #' Makes a synchronous API call to the DuckDuckGo Instant Answer API.
-#' Take a look at DuckDuckGo's terms of use (\url{https://api.duckduckgo.com/api}), before using it.
+#' Take a look at DuckDuckGo's terms of use (\url{https://api.duckduckgo.com/api}) before using it.
 #'
 #' @param query the query string
 #' @param no_redirect TRUE to skip HTTP redirects (for !bang commands)
