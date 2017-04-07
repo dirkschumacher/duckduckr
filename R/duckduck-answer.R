@@ -29,6 +29,10 @@
 #'
 #'         In addition there is always a \code{source} element with the URL used to query the data.
 #' @export
+#' @examples \dontrun{
+#' tmp <- duckduck_answer("duckduckgo")
+#' tmp$Abstract
+#' }
 duckduck_answer <- function(query, no_redirect = FALSE,
                             no_html = FALSE, skip_disambig = FALSE,
                             app_name = "duckduckr") {
