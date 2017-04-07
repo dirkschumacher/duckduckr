@@ -1,4 +1,4 @@
-#' DuckDuckGo's Instant Answer API
+#' Call DuckDuckGo Instant Answer API
 #'
 #' Makes a synchronous API call to the DuckDuckGo Instant Answer API.
 #' Take a look at DuckDuckGo's terms of use (\url{https://api.duckduckgo.com/api}), before using it.

@@ -2,7 +2,7 @@
 % Please edit documentation in R/duckduck-answer.R
 \name{duckduck_answer}
 \alias{duckduck_answer}
-\title{DuckDuckGo's Instant Answer API}
+\title{Call DuckDuckGo Instant Answer API}
 \usage{
 duckduck_answer(query, no_redirect = FALSE, no_html = FALSE,
   skip_disambig = FALSE, app_name = "duckduckr")

@@ -1,4 +1,4 @@
-#' Simple Client for DuckDuckGo's Instant Answer API
+#' Simple Client for the DuckDuckGo Instant Answer API
 #'
 #' Programmatic access to the DuckDuckGo's Instant Answer API <https://api.duckduckgo.com/api>
 #'

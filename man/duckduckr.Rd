@@ -4,7 +4,7 @@
 \name{duckduckr}
 \alias{duckduckr}
 \alias{duckduckr-package}
-\title{Simple Client for DuckDuckGo's Instant Answer API}
+\title{Simple Client for the DuckDuckGo Instant Answer API}
 \description{
 Programmatic access to the DuckDuckGo's Instant Answer API <https://api.duckduckgo.com/api>
 }
