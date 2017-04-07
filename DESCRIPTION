@@ -5,6 +5,8 @@ Version: 1.0.0
 Authors@R: c(person("Schumacher", "Dirk", email = "mail@dirk-schumacher.net", role = c("aut", "cre")))
 Description: Programmatic access to the DuckDuckGo Instant Answer API <https://api.duckduckgo.com/api>.
 License: MIT + file LICENSE
+URL: https://github.com/dirkschumacher/duckduckr
+BugReports: https://github.com/dirkschumacher/duckduckr/issues
 Encoding: UTF-8
 LazyData: true
 Imports: crul, jsonlite

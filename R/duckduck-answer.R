@@ -16,7 +16,7 @@
 #'         attributes contain additional meta data. Especially the \code{status} attribute indicates
 #'         if something went wrong during the HTTP call or parsing of the JSON text.
 #'
-#'         In case the call was successfull the \code{status} attribute is equal to "OK".
+#'         In case the call was successful the \code{status} attribute is equal to "OK".
 #'
 #'         In case something went wrong, the \code{status} attribute is equal to "error" and in the
 #'         \code{error} attribute you will find more information. In particular the \code{type}, which is
