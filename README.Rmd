@@ -6,12 +6,18 @@ output: github_document
 [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/dirkschumacher/duckduckr?branch=master&svg=true)](https://ci.appveyor.com/project/dirkschumacher/duckduckr)
 [![Coverage Status](https://img.shields.io/codecov/c/github/dirkschumacher/duckduckr/master.svg)](https://codecov.io/github/dirkschumacher/duckduckr?branch=master)
 
-# DuckduckR
+# DuckDuckR
 
 This is a simple *R* client for [DuckDuckGo's Instant Answer API](https://duckduckgo.com/api).
 
 ## Install
 
+### From CRAN
+```{r, eval=FALSE}
+install.packages("duckduckr")
+```
+
+### Latest development version
 ```{r, eval=FALSE}
 devtools::install_github("dirkschumacher/duckduckr")
 ```
