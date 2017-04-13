@@ -2,7 +2,7 @@ Package: duckduckr
 Type: Package
 Title: Simple Client for the DuckDuckGo Instant Answer API
 Version: 1.0.0.9000
-Authors@R: c(person("Schumacher", "Dirk", email = "mail@dirk-schumacher.net", role = c("aut", "cre")))
+Authors@R: c(person("Dirk", "Schumacher", email = "mail@dirk-schumacher.net", role = c("aut", "cre")))
 Description: Programmatic access to the DuckDuckGo Instant Answer API <https://api.duckduckgo.com/api>.
 License: MIT + file LICENSE
 URL: https://github.com/dirkschumacher/duckduckr
